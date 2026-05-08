@@ -8,6 +8,10 @@
 
 <body>
 
+<audio autoplay loop controls>
+    <source src="YTDown_YouTube_Chico-Buarque-O-Caderno_Media_6h_jz9ycPKM_007_128k.mp3" type="audio/mpeg">
+</audio>
+
 <header class="cabecalho">
     <img src="imagens/PARA%20A%20MELHOR%20MÃE%20DO%20MUNDO.png" alt="Titulo" class="imagem">
 </header>
@@ -103,6 +107,72 @@
     </div>
 </section>
 
+<section class="motivos">
+
+    <h1 class="titulo_motivos">
+        25 motivos para eu te amar 💖
+    </h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>💗 Seu carinho</h2>
+
+            <p>
+                Porque você sempre cuida de mim com amor,
+                mesmo nos dias difíceis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🌸 Sua força</h2>
+
+            <p>
+                Você enfrenta tudo com coragem
+                e nunca deixa de lutar pela nossa família.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🤍 Seu abraço</h2>
+
+            <p>
+                Seu abraço consegue transformar
+                qualquer dia ruim em paz.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>✨ Seu sorriso</h2>
+
+            <p>
+                Seu sorriso ilumina minha vida
+                e deixa tudo mais bonito.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>💌 Seu amor</h2>
+
+            <p>
+                Porque o seu amor é o lugar
+                mais seguro que existe.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🌷 Sua presença</h2>
+
+            <p>
+                Só de ter você perto,
+                tudo fica melhor.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 
 <script>
 
@@ -112,7 +182,7 @@
 
         heart.classList.add("heart");
 
-        const emojis = ["🌸","💖","🌷","💕"];
+        const emojis = ["🌸", "💖", "🌷", "💕"];
         heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 
         heart.style.left = Math.random() * window.innerWidth + "px";
@@ -134,7 +204,7 @@
 
 <script>
 
-    document.addEventListener("mousemove", function(e){
+    document.addEventListener("mousemove", function (e) {
 
         const brilho = document.createElement("div");
 
@@ -155,7 +225,7 @@
 
 <script>
 
-    function criarGlitter(){
+    function criarGlitter() {
 
         const glitter = document.createElement("div");
 
@@ -178,6 +248,67 @@
     }
 
     setInterval(criarGlitter, 120);
+
+</script>
+
+<section class="cartinha">
+
+    <div class="envelope" onclick="abrirCarta()">
+
+        <div class="tampa"></div>
+
+        <div class="carta" id="carta">
+            <h2>💖 Para minha mãe 💖</h2>
+
+            <p>
+                Obrigada por cada abraço,
+                cada cuidado e cada momento ao meu lado.
+                Você é meu maior presente. 🌸
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+    function abrirCarta() {
+
+        document.querySelector(".envelope")
+            .classList.toggle("aberto");
+
+    }
+
+</script>
+
+<section class="maquina">
+
+    <h1 id="texto-digitando"></h1>
+
+</section>
+
+<script>
+
+    const texto =
+        "Mãe, obrigada por tudo. Você é meu maior amor, meu maior exemplo e meu porto seguro. 💖";
+
+    let i = 0;
+
+    function escrever(){
+
+        if(i < texto.length){
+
+            document.getElementById("texto-digitando")
+                .innerHTML += texto.charAt(i);
+
+            i++;
+
+            setTimeout(escrever, 60);
+        }
+    }
+
+    escrever();
 
 </script>
 
