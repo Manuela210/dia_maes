@@ -1,0 +1,317 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem {
+    width: 1000px;
+    height: 400px;
+}
+
+.inicio{
+    display: flex;
+    margin: 15px;
+    gap: 1010px;
+    margin-top: -10px;
+}
+
+.linhaTop1{
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.73);
+}
+
+.linhaTop2{
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.73);
+    margin-top: -15px;
+}
+
+.imagem2 {
+    width: 800px;
+    height: 530px;
+}
+
+.imagem3 {
+    width: 700px;
+    height: 200px;
+}
+
+.texto{
+    font-family: Garamond;
+    font-size: 21px;
+}
+
+.sessao1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    margin-top: -100px;
+}
+
+.sessao2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 25px;
+}
+
+.img_polaroide {
+    width: 350px;
+    height: 450px;
+}
+
+.img_polaroide:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+
+.titulo_polaroide {
+    width: 300px;
+    height: 80px;
+}
+
+.titulo_polaroide_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.sessao4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.sessao5 {
+    margin-top: 35px;
+    background-color: #e171ae;
+}
+
+.container {
+    width: 1300px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid #c9439e;
+}
+
+.banner {
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite;
+}
+
+.banner img {
+    width: calc(100% / 3);
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0 ;
+}
+
+@keyframes slide {
+
+    0%, 20% {
+        transform: translateX(0);
+    }
+
+    33%, 53% {
+        transform: translateX(-33.33%);
+    }
+
+    66%, 86% {
+        transform: translateX(-66.66%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+}
+
+.heart{
+    position: fixed;
+    top: -50px;
+    color: #ff4f87;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: cair linear forwards;
+}
+
+@keyframes cair{
+
+    0%{
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.texto{
+    animation: aparecer 5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img_polaroide:nth-child(1){
+    transform: rotate(-5deg);
+}
+
+.img_polaroide:nth-child(2){
+    transform: rotate(4deg);
+}
+
+.img_polaroide:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.texto {
+    background: rgb(241, 210, 229);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.brilho{
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    animation: brilhoAnim 0.8s linear forwards;
+
+    box-shadow:
+            0 0 10px white,
+            0 0 20px #ffb6d9,
+            0 0 30px #ff69b4;
+
+    z-index: 9999;
+}
+
+@keyframes brilhoAnim{
+
+    0%{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+footer{
+    margin-top: 80px;
+    padding: 40px 20px;
+
+    background: linear-gradient(to right, #f1aecb, #ffd6e7);
+
+    text-align: center;
+
+    border-top: 3px solid white;
+
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+footer h2{
+    font-size: 32px;
+    color: white;
+
+    font-family: 'Georgia', serif;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+
+    margin-bottom: 10px;
+}
+
+footer p{
+    color: white;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.9;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.glitter{
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    background: white;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0;
+
+    box-shadow:
+            0 0 5px white,
+            0 0 10px #ffd6e7,
+            0 0 15px #ffb6d9;
+
+    animation: glitterAnim linear forwards;
+}
+
+@keyframes glitterAnim{
+
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}

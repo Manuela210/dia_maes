@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Dia das Mães</title>
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <img src="imagens/PARA%20A%20MELHOR%20MÃE%20DO%20MUNDO.png" alt="Titulo" class="imagem">
+</header>
+
+<div>
+    <hr class="linhaTop1">
+    <div class="inicio">
+        <p>PARA: LILIANA DE SOUZA MELIN</p>
+        <p>MELHOR MÃE DO MUNDO</p>
+    </div>
+    <hr class="linhaTop2">
+</div>
+
+<div class="cabecalho">
+    <img src="imagens/Design%20sem%20nome%20(3).png" alt="imagem2" class="imagem2">
+</div>
+
+<div class="cabecalho">
+    <img src="imagens/PARA%20A%20MELHOR%20MÃE%20DO%20MUNDO%20(1).png" alt="imagem2" class="imagem3">
+</div>
+
+<section>
+    <div class="sessao1">
+        <div><img src="imagens/imagem4.png" width="500" height="500"></div>
+
+        <div class="texto">
+            <p>Mãe, você é o abraço que acalma, a voz que conforta e o coração que nunca desiste. Em cada cuidado
+                silencioso, em
+                cada conselho e em cada gesto de amor, existe uma força que transforma tudo ao redor.<br>
+
+                Ser mãe é amar mesmo nos dias difíceis, é colocar o coração em outra pessoa e seguir lutando todos os
+                dias
+                com
+                coragem e carinho. Nem sempre o mundo reconhece tudo o que você faz, mas quem recebe o seu amor sente
+                isso
+                em cada detalhe.<br>
+
+                Hoje é um dia para agradecer por cada noite mal dormida, cada preocupação escondida atrás de um sorriso
+                e
+                cada
+                momento em que você foi porto seguro quando tudo parecia difícil.<br>
+
+                Feliz Dia das Mães para aquela que faz da vida um lugar mais bonito apenas por existir. Você é amor na
+                forma
+                mais verdadeira. 💖</p>
+        </div>
+    </div>
+    <hr class="linhaTop2">
+    <hr class="linhaTop2">
+</section>
+
+<div class="titulo_polaroide_div">
+    <img src="imagens/titulo_polaroide.png" class="titulo_polaroide">
+</div>
+
+<section class="sessao2">
+    <div>
+        <img class="img_polaroide" src="imagens/1.png">
+    </div>
+    <div>
+        <img class="img_polaroide" src="imagens/2.png">
+    </div>
+    <div>
+        <img class="img_polaroide" src="imagens/3.png">
+    </div>
+    <div>
+        <img class="img_polaroide" src="imagens/4.png">
+    </div>
+</section>
+
+<section class="sessao4">
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6h_jz9ycPKM?si=YJFW8V8IScNWu_LL"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1yqePkdiOJE?si=WkxAgrViV5lrRYGm"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="sessao5">
+    <div class="container">
+        <div class="banner">
+            <img src="imagens/banner1.png" alt="Banner 1">
+            <img src="imagens/banner2.png" alt="Banner 2">
+            <img src="imagens/banner3.png" alt="Banner 3">
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    function criarCoracao() {
+
+        const heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        const emojis = ["🌸","💖","🌷","💕"];
+        heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+        heart.style.left = Math.random() * window.innerWidth + "px";
+
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+        heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 7000);
+    }
+
+    setInterval(criarCoracao, 300);
+
+</script>
+
+<script>
+
+    document.addEventListener("mousemove", function(e){
+
+        const brilho = document.createElement("div");
+
+        brilho.classList.add("brilho");
+
+        brilho.style.left = e.pageX + "px";
+        brilho.style.top = e.pageY + "px";
+
+        document.body.appendChild(brilho);
+
+        setTimeout(() => {
+            brilho.remove();
+        }, 800);
+
+    });
+
+</script>
+
+<script>
+
+    function criarGlitter(){
+
+        const glitter = document.createElement("div");
+
+        glitter.classList.add("glitter");
+
+        glitter.style.left = Math.random() * window.innerWidth + "px";
+
+        glitter.style.top = Math.random() * window.innerHeight + "px";
+
+        glitter.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+        glitter.style.width = glitter.style.height =
+            (Math.random() * 4 + 2) + "px";
+
+        document.body.appendChild(glitter);
+
+        setTimeout(() => {
+            glitter.remove();
+        }, 5000);
+    }
+
+    setInterval(criarGlitter, 120);
+
+</script>
+
+<footer>
+    <h2>Com amor, Manu 💖</h2>
+</footer>
+
+</body>
+</html>
